@@ -27,18 +27,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         zoneView.zoneOwner = self; // AASDK
         AASDK.registerContentListeners(for: self)
-        if (AASDK.zoneAvailable("3002"))
-        {
-            print("Ready!")
-        }
-        else
-        {
-            print ("Zone unavailable\nAvailable Zones:\n" )
-            for id in AASDK.availableZoneIDs()
-            {
-                print ("\(id)\n")
-            }
-        }
         
         self.itemNameTextField.delegate = self
         self.itemQuantityTextField.delegate = self

@@ -56,8 +56,6 @@
 		FA17AD451F27DFCC003010D8 /* AA Grocery ListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AA Grocery ListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA17AD491F27DFCC003010D8 /* AA_Grocery_ListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AA_Grocery_ListUITests.swift; sourceTree = "<group>"; };
 		FA17AD4B1F27DFCC003010D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA17AD581F27DFF2003010D8 /* AASDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AASDK.framework; path = ../../../../../../Downloads/AASDK/AASDK.framework; sourceTree = "<group>"; };
-		FA17AD591F27DFF2003010D8 /* ADAMoatMobileAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ADAMoatMobileAppKit.framework; path = ../../../../../../Downloads/AASDK/ADAMoatMobileAppKit.framework; sourceTree = "<group>"; };
 		FA17AD5C1F27E004003010D8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		FA17AD5E1F27E00B003010D8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FA17AD601F27E011003010D8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -168,8 +166,6 @@
 				FA17AD601F27E011003010D8 /* Security.framework */,
 				FA17AD5E1F27E00B003010D8 /* CoreLocation.framework */,
 				FA17AD5C1F27E004003010D8 /* CoreTelephony.framework */,
-				FA17AD581F27DFF2003010D8 /* AASDK.framework */,
-				FA17AD591F27DFF2003010D8 /* ADAMoatMobileAppKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

@@ -79,7 +79,7 @@ extension AppDelegate: AASDKDebugObserver {
     func aaDebugNotification(_ notification: Notification) {
         if let message = notification.userInfo?[AASDK_KEY_MESSAGE] as? String
         {
-            print(message)
+            //print(message)
         }
     }
 }
