@@ -73,14 +73,6 @@
                                 <rect key="frame" x="16" y="83" width="288" height="277"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fCg-AB-mnf" customClass="AAAdAdaptedZoneView">
-                                <rect key="frame" x="16" y="368" width="288" height="116"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="zoneId" value="3002"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="by AdAdapted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUM-d3-ym3">
                                 <rect key="frame" x="16" y="59" width="94" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -103,7 +95,6 @@
                         <outlet property="itemQuantityTextField" destination="D0N-jc-jnd" id="yAG-2w-H1J"/>
                         <outlet property="itemScrollView" destination="ebC-iX-csZ" id="mjT-s6-Lsx"/>
                         <outlet property="showRemovedToggle" destination="Wfp-9a-Zkt" id="HB5-7h-RJV"/>
-                        <outlet property="zoneView" destination="fCg-AB-mnf" id="fzK-mE-r0c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

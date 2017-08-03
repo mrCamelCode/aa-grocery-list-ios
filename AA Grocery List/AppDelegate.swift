@@ -7,12 +7,6 @@
 //
 
 import UIKit
-import CoreTelephony
-import CoreLocation
-import Security
-import SystemConfiguration
-import MobileCoreServices
-import AdSupport
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,20 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // START FOR AASDK
-        // see: http://dev.adadapted.com/ios/4.0.2_e810178/html_docs/bootstrapping.html
-        let options = [
-            AASDK_OPTION_TEST_MODE: true // DO NOT ship to PROD with test mode on
-            //AASDK_OPTION_INIT_PARAMS: ["example_store_id":"KNOWNATRUNTIME"]
-            ] as [String : Any]
-        
-        // we recommend this setting when starting integration, or debugging issues.
-        // DO NOT ship to PROD with debugging on
-        AASDK.registerDebugListeners(for: self as! AASDKDebugObserver, forMessageTypes: [AASDK_DEBUG_GENERAL, AASDK_DEBUG_NETWORK_DETAILED])
-        
-        // AdAdapted will provide you with an AppId to pass in here
-        AASDK.startSession(withAppID: "IOSRECIPEDEMOAPP", registerListenersFor: self, options: options)
         return true
     }
 
@@ -63,24 +43,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
 }
-
-extension AppDelegate: AASDKObserver {
-    func aaSDKInitComplete(_ notification: Notification) {
-        print("init complete")
-    }
-    
-    func aaSDKError(_ error: Notification) {
-        print("error")
-    }
-}
-
-// see: http://dev.adadapted.com/ios/4.0.2_e810178/html_docs/debugging.html
-extension AppDelegate: AASDKDebugObserver {
-    func aaDebugNotification(_ notification: Notification) {
-        if let message = notification.userInfo?[AASDK_KEY_MESSAGE] as? String
-        {
-            //print(message)
-        }
-    }
-}
-

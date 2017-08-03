@@ -14,7 +14,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var itemQuantityTextField: UITextField!
     @IBOutlet weak var itemScrollView: UIScrollView!
     @IBOutlet weak var showRemovedToggle: UISegmentedControl!
-    @IBOutlet weak var zoneView: AAAdAdaptedZoneView!
     
     var numItemScrollViewDefaultSubviews: Int = 0
     
@@ -25,9 +24,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        zoneView.zoneOwner = self; // AASDK
-        AASDK.registerContentListeners(for: self)
-        
         self.itemNameTextField.delegate = self
         self.itemQuantityTextField.delegate = self
         
@@ -83,9 +79,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         for item in allItems
         {
             item.removeFromSuperview()
-            
-            // Register every removal with AA
-            AASDK.reportItem(item.itemName, deletedFromList: "grocery list")
         }
         
         // Clear the list.
@@ -120,9 +113,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         {
             sender.backgroundColor = sender.removedColor_bkg
             sender.setTitleColor(sender.removedColor_txt, for: .normal)
-            
-            // Register as crossed off with AA
-            AASDK.reportItem(sender.itemName, crossedOffList: "grocery list")
         }
         else
         {
@@ -161,55 +151,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             {
                 addItemToScrollView(item: item)
             }
-        }
-    }
-}
-
-extension ViewController : AAZoneViewOwner
-{
-    func viewControllerForPresentingModalView() -> UIViewController! {
-        return self
-    }
-}
-
-/*
-    Allows access to the payloads.
- */
-extension ViewController : AASDKContentDelegate
-{
-
-    // see: http://dev.adadapted.com/ios/4.0.2_e810178/html_docs/ad_content.html
-    func aaContentNotification(_ notification: Notification) {
-        guard let userinfo = notification.userInfo else { return }
-        guard let payload = userinfo[AASDK_KEY_PAYLOAD] as? [AnyHashable:Any] else { return }
-        guard let items   = payload["list-items"] as? [String] else { return }
-        
-        for item in items
-        {
-            addItem(itemName: item, itemQuantity: 1)
-        }
-    }
-    
-    // see: http://dev.adadapted.com/ios/4.0.2_e810178/html_docs/payload_content.html
-    func aaPayloadNotification(_ notification: Notification)
-    {
-        guard let userinfo = notification.userInfo else { return }
-        guard let payloads = userinfo[AASDK_KEY_CONTENT_PAYLOADS] as? [AAContentPayload] else { return }
-        
-        for payload in payloads
-        {
-            for detailedItem in payload.detailedListItems
-            {
-                // App-specific handling
-                addItem(itemName: detailedItem.productTitle, itemQuantity: 1)
-                
-                // Report items added (or crossed off, or deleted) to/from list.
-                // For this app, the item is registered as crossed off in the btn_item method. The item is registered as deleted when the clearList method is called.
-                AASDK.reportItem(detailedItem.productTitle, addedToList: "grocery list")
-            }
-            
-            // Accept or reject the payload
-            payload.reportReceivedOntoList("grocery list")
         }
     }
 }

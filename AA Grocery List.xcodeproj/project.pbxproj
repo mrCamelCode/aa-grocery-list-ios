@@ -14,15 +14,7 @@
 		FA17AD341F27DFCC003010D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA17AD321F27DFCC003010D8 /* LaunchScreen.storyboard */; };
 		FA17AD3F1F27DFCC003010D8 /* AA_Grocery_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17AD3E1F27DFCC003010D8 /* AA_Grocery_ListTests.swift */; };
 		FA17AD4A1F27DFCC003010D8 /* AA_Grocery_ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17AD491F27DFCC003010D8 /* AA_Grocery_ListUITests.swift */; };
-		FA17AD5D1F27E004003010D8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA17AD5C1F27E004003010D8 /* CoreTelephony.framework */; };
-		FA17AD5F1F27E00B003010D8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA17AD5E1F27E00B003010D8 /* CoreLocation.framework */; };
-		FA17AD611F27E011003010D8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA17AD601F27E011003010D8 /* Security.framework */; };
-		FA17AD631F27E018003010D8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA17AD621F27E018003010D8 /* SystemConfiguration.framework */; };
-		FA17AD651F27E020003010D8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA17AD641F27E020003010D8 /* MobileCoreServices.framework */; };
-		FA17AD671F27E026003010D8 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA17AD661F27E026003010D8 /* AdSupport.framework */; };
 		FA7385C41F2A2AE400840191 /* UIItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7385C31F2A2AE400840191 /* UIItemButton.swift */; };
-		FA92548B1F338E44002EA044 /* AASDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9254891F338E44002EA044 /* AASDK.framework */; };
-		FA92548C1F338E44002EA044 /* ADAMoatMobileAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA92548A1F338E44002EA044 /* ADAMoatMobileAppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,16 +48,7 @@
 		FA17AD451F27DFCC003010D8 /* AA Grocery ListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AA Grocery ListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA17AD491F27DFCC003010D8 /* AA_Grocery_ListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AA_Grocery_ListUITests.swift; sourceTree = "<group>"; };
 		FA17AD4B1F27DFCC003010D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA17AD5C1F27E004003010D8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		FA17AD5E1F27E00B003010D8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		FA17AD601F27E011003010D8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		FA17AD621F27E018003010D8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		FA17AD641F27E020003010D8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		FA17AD661F27E026003010D8 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		FA17AD681F27E06B003010D8 /* AAGroceryList-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AAGroceryList-Bridging-Header.h"; path = "../AAGroceryList-Bridging-Header.h"; sourceTree = "<group>"; };
 		FA7385C31F2A2AE400840191 /* UIItemButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIItemButton.swift; sourceTree = "<group>"; };
-		FA9254891F338E44002EA044 /* AASDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AASDK.framework; sourceTree = "<group>"; };
-		FA92548A1F338E44002EA044 /* ADAMoatMobileAppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ADAMoatMobileAppKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,14 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA17AD671F27E026003010D8 /* AdSupport.framework in Frameworks */,
-				FA92548C1F338E44002EA044 /* ADAMoatMobileAppKit.framework in Frameworks */,
-				FA17AD651F27E020003010D8 /* MobileCoreServices.framework in Frameworks */,
-				FA17AD631F27E018003010D8 /* SystemConfiguration.framework in Frameworks */,
-				FA17AD611F27E011003010D8 /* Security.framework in Frameworks */,
-				FA17AD5F1F27E00B003010D8 /* CoreLocation.framework in Frameworks */,
-				FA17AD5D1F27E004003010D8 /* CoreTelephony.framework in Frameworks */,
-				FA92548B1F338E44002EA044 /* AASDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +107,6 @@
 				FA17AD321F27DFCC003010D8 /* LaunchScreen.storyboard */,
 				FA17AD351F27DFCC003010D8 /* Info.plist */,
 				FA7385C31F2A2AE400840191 /* UIItemButton.swift */,
-				FA17AD681F27E06B003010D8 /* AAGroceryList-Bridging-Header.h */,
 			);
 			path = "AA Grocery List";
 			sourceTree = "<group>";
@@ -158,14 +132,6 @@
 		FA17AD571F27DFF2003010D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FA9254891F338E44002EA044 /* AASDK.framework */,
-				FA92548A1F338E44002EA044 /* ADAMoatMobileAppKit.framework */,
-				FA17AD661F27E026003010D8 /* AdSupport.framework */,
-				FA17AD641F27E020003010D8 /* MobileCoreServices.framework */,
-				FA17AD621F27E018003010D8 /* SystemConfiguration.framework */,
-				FA17AD601F27E011003010D8 /* Security.framework */,
-				FA17AD5E1F27E00B003010D8 /* CoreLocation.framework */,
-				FA17AD5C1F27E004003010D8 /* CoreTelephony.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -467,7 +433,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joshuatruitt.AA-Grocery-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AAGroceryList-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -485,7 +451,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joshuatruitt.AA-Grocery-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AAGroceryList-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
