@@ -87,6 +87,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yKx-TD-408" customClass="AAAdAdaptedZoneView">
+                                <rect key="frame" x="16" y="368" width="288" height="116"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="zoneId" value="3002"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -95,6 +103,7 @@
                         <outlet property="itemQuantityTextField" destination="D0N-jc-jnd" id="yAG-2w-H1J"/>
                         <outlet property="itemScrollView" destination="ebC-iX-csZ" id="mjT-s6-Lsx"/>
                         <outlet property="showRemovedToggle" destination="Wfp-9a-Zkt" id="HB5-7h-RJV"/>
+                        <outlet property="zoneView" destination="yKx-TD-408" id="fgG-Xl-QsQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

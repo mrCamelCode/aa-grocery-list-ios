@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var itemQuantityTextField: UITextField!
     @IBOutlet weak var itemScrollView: UIScrollView!
     @IBOutlet weak var showRemovedToggle: UISegmentedControl!
+    @IBOutlet weak var zoneView: AAAdAdaptedZoneView!
     
     var numItemScrollViewDefaultSubviews: Int = 0
     
@@ -24,6 +25,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        zoneView.zoneOwner = self
+        
         self.itemNameTextField.delegate = self
         self.itemQuantityTextField.delegate = self
         
@@ -155,3 +158,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
+extension ViewController : AAZoneViewOwner
+{
+    func viewControllerForPresentingModalView() -> UIViewController! {
+        return self
+    }
+    
+}

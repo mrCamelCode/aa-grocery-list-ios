@@ -21,6 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let options = [
+            AASDK_OPTION_TEST_MODE: true // DO NOT ship to PROD with test mode on
+            ] as [String : Any]
+        
+        // AdAdapted will provide you with an AppId to pass in here
+        AASDK.startSession(withAppID: "IOSRECIPEDEMOAPP", registerListenersFor: self, options: options)
+        
+        AASDK.registerDebugListeners(for: self as! AASDKDebugObserver, forMessageTypes: [AASDK_DEBUG_GENERAL, AASDK_DEBUG_NETWORK_DETAILED])
+        
         return true
     }
 
@@ -46,5 +55,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         
         
+    }
+}
+
+extension AppDelegate: AASDKObserver {
+    func aaSDKInitComplete(_ notification: Notification) {
+        print("init complete")
+    }
+    
+    func aaSDKError(_ error: Notification) {
+        print("error")
+    }
+}
+
+// see: http://dev.adadapted.com/ios/4.0.2_e810178/html_docs/debugging.html
+extension AppDelegate: AASDKDebugObserver {
+    func aaDebugNotification(_ notification: Notification) {
+        if let message = notification.userInfo?[AASDK_KEY_MESSAGE] as? String
+        {
+            //print(message)
+        }
     }
 }
