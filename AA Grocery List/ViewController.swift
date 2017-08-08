@@ -186,4 +186,27 @@ extension ViewController : AASDKContentDelegate
             addItem(itemName: item, itemQuantity: 1)
         }
     }
+    
+    // see: http://dev.adadapted.com/ios/4.0.2_e810178/html_docs/payload_content.html
+    func aaPayloadNotification(_ notification: Notification)
+    {
+        guard let userinfo = notification.userInfo else { return }
+        guard let payloads = userinfo[AASDK_KEY_CONTENT_PAYLOADS] as? [AAContentPayload] else { return }
+        
+        for payload in payloads
+        {
+            for detailedItem in payload.detailedListItems
+            {
+                // App-specific handling
+                addItem(itemName: detailedItem.productTitle, itemQuantity: 1)
+                
+                // Report items added (or crossed off, or deleted) to/from list.
+                // For this app, the item is registered as crossed off in the btn_item method. The item is registered as deleted when the clearList method is called.
+                AASDK.reportItem(detailedItem.productTitle, addedToList: "grocery list")
+            }
+            
+            // Accept or reject the payload
+            payload.reportReceivedOntoList("grocery list")
+        }
+    }
 }
