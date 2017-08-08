@@ -26,6 +26,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         // Do any additional setup after loading the view, typically from a nib.
         zoneView.zoneOwner = self
+        AASDK.registerContentListeners(for: self)
         
         self.itemNameTextField.delegate = self
         self.itemQuantityTextField.delegate = self
@@ -164,4 +165,25 @@ extension ViewController : AAZoneViewOwner
         return self
     }
     
+}
+
+/*
+ Allows access to the payloads.
+ */
+extension ViewController : AASDKContentDelegate
+{
+    
+    // see: http://dev.adadapted.com/ios/4.0.2_e810178/html_docs/ad_content.html
+    func aaContentNotification(_ notification: Notification)
+    {
+        guard let userinfo = notification.userInfo else { return }
+        guard let payload = userinfo[AASDK_KEY_PAYLOAD] as? [AnyHashable:Any] else { return }
+        guard let items   = payload["list-items"] as? [String] else { return }
+        
+        for item in items
+        {
+            // App-specific handling
+            addItem(itemName: item, itemQuantity: 1)
+        }
+    }
 }
